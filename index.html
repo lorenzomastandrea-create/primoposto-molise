@@ -19,11 +19,15 @@
       --text: #1a202c;
       --muted: #4a5568;
       --border: #cbd5e1;
-      --font-scale: 1;
     }
 
-    body.large-text {
-      --font-scale: 1.18;
+    html {
+      font-size: 16px;
+      transition: font-size 0.15s ease;
+    }
+
+    html.large-text {
+      font-size: 21px; /* Ingrandisce in modo netto tutta l'interfaccia (+31%) */
     }
 
     * {
@@ -36,7 +40,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      font-size: calc(18px * var(--font-scale));
+      font-size: 1.125rem;
       line-height: 1.55;
     }
 
@@ -44,28 +48,28 @@
     header {
       background-color: var(--primary);
       color: #ffffff;
-      padding: 18px 20px;
+      padding: 1.1rem 1.25rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
     }
 
     .header-inner {
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 14px;
+      gap: 0.9rem;
       flex-wrap: wrap;
     }
 
     .brand h1 {
-      font-size: calc(24px * var(--font-scale));
+      font-size: 1.55rem;
       font-weight: 800;
       letter-spacing: -0.3px;
     }
 
     .brand p {
-      font-size: calc(15px * var(--font-scale));
+      font-size: 0.95rem;
       opacity: 0.95;
       margin-top: 2px;
     }
@@ -75,42 +79,48 @@
       color: var(--primary-dark);
       border: 2px solid #ffffff;
       border-radius: 10px;
-      padding: 10px 16px;
-      font-size: calc(16px * var(--font-scale));
-      font-weight: 700;
+      padding: 0.65rem 1rem;
+      font-size: 1rem;
+      font-weight: 800;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      transition: transform 0.1s ease;
+      gap: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .font-toggle:hover {
       background: #e9f2ff;
     }
 
+    .font-toggle.active-zoom {
+      background: #ffd43b;
+      color: #1a202c;
+      border-color: #ffd43b;
+    }
+
     /* Container & Stepper */
     main {
-      max-width: 820px;
-      margin: 24px auto 48px;
-      padding: 0 16px;
+      max-width: 840px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
     }
 
     .stepper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 24px;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
     }
 
     .step-pill {
       background: #e2e8f0;
       color: #475569;
-      padding: 12px 10px;
+      padding: 0.75rem 0.6rem;
       border-radius: 10px;
       text-align: center;
       font-weight: 700;
-      font-size: calc(15px * var(--font-scale));
+      font-size: 0.95rem;
       border: 2px solid transparent;
     }
 
@@ -132,20 +142,20 @@
       background: var(--surface);
       border: 2px solid var(--border);
       border-radius: 14px;
-      padding: 24px;
+      padding: 1.5rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     h2 {
-      font-size: calc(22px * var(--font-scale));
-      margin-bottom: 8px;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
       color: var(--text);
     }
 
     .subtitle {
       color: var(--muted);
-      margin-bottom: 20px;
-      font-size: calc(17px * var(--font-scale));
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
     }
 
     /* Info Box: Niente codice ricetta */
@@ -154,34 +164,34 @@
       border: 2px solid #9ec5fe;
       border-left: 6px solid var(--primary);
       border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 22px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1.4rem;
       color: #052c65;
-      font-size: calc(16px * var(--font-scale));
+      font-size: 1rem;
     }
 
     .reassure-box strong {
       display: block;
-      font-size: calc(17px * var(--font-scale));
-      margin-bottom: 4px;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
     }
 
     /* Form Controls */
     .form-group {
-      margin-bottom: 22px;
+      margin-bottom: 1.5rem;
     }
 
     label.field-label {
       display: block;
-      font-weight: 700;
-      margin-bottom: 8px;
-      font-size: calc(18px * var(--font-scale));
+      font-weight: 800;
+      margin-bottom: 0.65rem;
+      font-size: 1.15rem;
     }
 
     select, input[type="text"], input[type="tel"] {
       width: 100%;
-      padding: 14px 16px;
-      font-size: calc(18px * var(--font-scale));
+      padding: 0.9rem 1rem;
+      font-size: 1.125rem;
       border: 2px solid #94a3b8;
       border-radius: 10px;
       background-color: #ffffff;
@@ -194,11 +204,61 @@
       box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.2);
     }
 
+    /* Griglia Visite con Emoticon */
+    .specialty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 650px) {
+      .specialty-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .specialty-card {
+      border: 2px solid #94a3b8;
+      border-radius: 12px;
+      padding: 0.95rem 0.75rem;
+      text-align: center;
+      cursor: pointer;
+      background: #ffffff;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+
+    .specialty-card:hover {
+      border-color: var(--primary);
+      background: #f8fbff;
+    }
+
+    .specialty-card.selected {
+      border-color: var(--primary);
+      background: #e7f1ff;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    .specialty-emoji {
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .specialty-name {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
     /* Priority Grid */
     .priority-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 0.75rem;
     }
 
     @media (max-width: 600px) {
@@ -210,7 +270,7 @@
     .priority-option {
       border: 2px solid #94a3b8;
       border-radius: 12px;
-      padding: 14px;
+      padding: 0.9rem;
       cursor: pointer;
       background: #ffffff;
       transition: all 0.15s ease;
@@ -232,21 +292,21 @@
       background: var(--primary);
       color: #ffffff;
       font-weight: 800;
-      padding: 2px 10px;
+      padding: 0.15rem 0.65rem;
       border-radius: 6px;
-      margin-right: 8px;
-      font-size: calc(17px * var(--font-scale));
+      margin-right: 0.5rem;
+      font-size: 1.05rem;
     }
 
     .priority-title {
-      font-weight: 700;
-      font-size: calc(17px * var(--font-scale));
+      font-weight: 800;
+      font-size: 1.05rem;
     }
 
     .priority-desc {
       display: block;
-      margin-top: 6px;
-      font-size: calc(15px * var(--font-scale));
+      margin-top: 0.35rem;
+      font-size: 0.95rem;
       color: var(--muted);
     }
 
@@ -255,11 +315,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 0.5rem;
       width: 100%;
-      padding: 16px 20px;
-      font-size: calc(19px * var(--font-scale));
-      font-weight: 700;
+      padding: 1rem 1.25rem;
+      font-size: 1.15rem;
+      font-weight: 800;
       border-radius: 12px;
       border: none;
       cursor: pointer;
@@ -288,7 +348,7 @@
       background: #ffffff;
       color: var(--text);
       border: 2px solid #94a3b8;
-      margin-top: 12px;
+      margin-top: 0.75rem;
     }
 
     .btn-outline:hover {
@@ -299,8 +359,8 @@
     .result-card {
       border: 2px solid var(--border);
       border-radius: 12px;
-      padding: 18px;
-      margin-bottom: 16px;
+      padding: 1.15rem;
+      margin-bottom: 1rem;
       background: #ffffff;
     }
 
@@ -312,16 +372,16 @@
     .badge-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
     }
 
     .badge {
       display: inline-block;
-      padding: 6px 12px;
+      padding: 0.4rem 0.75rem;
       border-radius: 8px;
       font-weight: 800;
-      font-size: calc(14px * var(--font-scale));
+      font-size: 0.9rem;
     }
 
     .badge-public {
@@ -334,35 +394,26 @@
       background: var(--green-bg);
       color: var(--green);
       border: 2px solid var(--green);
-      font-size: calc(15px * var(--font-scale));
-    }
-
-    .result-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
+      font-size: 0.95rem;
     }
 
     .facility-name {
-      font-size: calc(20px * var(--font-scale));
+      font-size: 1.25rem;
       font-weight: 800;
     }
 
     .facility-city {
       color: var(--muted);
-      font-size: calc(16px * var(--font-scale));
+      font-size: 1rem;
     }
 
     .date-box {
       background: #f1f5f9;
-      padding: 10px 14px;
+      padding: 0.65rem 0.9rem;
       border-radius: 8px;
-      margin: 12px 0;
+      margin: 0.75rem 0;
       font-weight: 700;
-      font-size: calc(17px * var(--font-scale));
+      font-size: 1.05rem;
     }
 
     .date-box.fast {
@@ -375,20 +426,20 @@
       background: var(--amber-bg);
       border: 2px solid var(--amber-border);
       border-radius: 12px;
-      padding: 20px;
-      margin-top: 24px;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
     }
 
     .alert-box h3 {
       color: var(--amber-text);
-      font-size: calc(19px * var(--font-scale));
-      margin-bottom: 6px;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
     }
 
     .alert-box p {
       color: #523e02;
-      margin-bottom: 14px;
-      font-size: calc(16px * var(--font-scale));
+      margin-bottom: 0.9rem;
+      font-size: 1rem;
     }
 
     /* Confirmation Box */
@@ -396,26 +447,26 @@
       background: var(--green-bg);
       border: 2px solid var(--green);
       border-radius: 12px;
-      padding: 22px;
+      padding: 1.4rem;
       color: #0a3622;
     }
 
     .confirm-panel h3 {
-      font-size: calc(22px * var(--font-scale));
-      margin-bottom: 10px;
+      font-size: 1.35rem;
+      margin-bottom: 0.65rem;
     }
 
     .summary-list {
       background: #ffffff;
       border-radius: 10px;
-      padding: 16px;
-      margin: 16px 0;
+      padding: 1rem;
+      margin: 1rem 0;
       color: var(--text);
       border: 1px solid var(--green-border);
     }
 
     .summary-list p {
-      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
     }
 
     .summary-list p:last-child {
@@ -456,18 +507,37 @@
 
       <div class="reassure-box">
         <strong>ℹ️ Non serve avere la ricetta in mano né inserire codici lunghi</strong>
-        Per cercare ti basta conoscere solo la <strong>lettera di priorità</strong> scritta dal medico (U, B, D oppure P).
+        Per cercare ti basta toccare la visita e scegliere la <strong>lettera di priorità</strong> scritta dal medico (U, B, D oppure P).
       </div>
 
       <div class="form-group">
-        <label class="field-label" for="specialty">1. Scegli la visita specialistica</label>
-        <select id="specialty">
-          <option value="Ortopedia">Visita Ortopedica</option>
-          <option value="Cardiologia">Visita Cardiologica + ECG</option>
-          <option value="Oculistica">Visita Oculistica</option>
-          <option value="Dermatologia">Visita Dermatologica</option>
-          <option value="Ecografia">Ecografia Addome Completo</option>
-        </select>
+        <label class="field-label">1. Tocca la visita specialistica che devi fare</label>
+        <div class="specialty-grid" id="specialtyGrid">
+          <div class="specialty-card selected" onclick="selectSpecialty('Visita Ortopedica', this)">
+            <span class="specialty-emoji">🦴</span>
+            <span class="specialty-name">Ortopedia</span>
+          </div>
+          <div class="specialty-card" onclick="selectSpecialty('Visita Cardiologica + ECG', this)">
+            <span class="specialty-emoji">❤️</span>
+            <span class="specialty-name">Cardiologia</span>
+          </div>
+          <div class="specialty-card" onclick="selectSpecialty('Visita Oculistica', this)">
+            <span class="specialty-emoji">👁️</span>
+            <span class="specialty-name">Oculistica</span>
+          </div>
+          <div class="specialty-card" onclick="selectSpecialty('Visita Dermatologica', this)">
+            <span class="specialty-emoji">🩺</span>
+            <span class="specialty-name">Dermatologia</span>
+          </div>
+          <div class="specialty-card" onclick="selectSpecialty('Ecografia Addome Completo', this)">
+            <span class="specialty-emoji">🖥️</span>
+            <span class="specialty-name">Ecografia</span>
+          </div>
+          <div class="specialty-card" onclick="selectSpecialty('Visita Neurologica', this)">
+            <span class="specialty-emoji">🧠</span>
+            <span class="specialty-name">Neurologia</span>
+          </div>
+        </div>
       </div>
 
       <div class="form-group">
@@ -499,10 +569,10 @@
       <div class="form-group">
         <label class="field-label" for="zone">3. Zona preferita in Molise</label>
         <select id="zone">
-          <option value="Campobasso">Campobasso e dintorni</option>
-          <option value="Isernia">Isernia e dintorni</option>
-          <option value="Termoli">Termoli e Basso Molise</option>
-          <option value="Tutto">Tutto il Molise (mostra il posto più vicino nel tempo)</option>
+          <option value="Campobasso">📍 Campobasso e dintorni</option>
+          <option value="Isernia">📍 Isernia e dintorni</option>
+          <option value="Termoli">📍 Termoli e Basso Molise</option>
+          <option value="Tutto">🗺️ Tutto il Molise (mostra il posto più vicino nel tempo)</option>
         </select>
       </div>
 
@@ -570,12 +640,12 @@
           <h3 id="successHeading">🎉 Richiesta confermata!</h3>
           <p id="successMessage"></p>
           <div class="summary-list" id="finalReceipt"></div>
-          <p style="font-size: calc(16px * var(--font-scale)); margin-top: 10px;">
+          <p style="font-size: 1rem; margin-top: 0.75rem;">
             <strong>Promemoria:</strong> Il giorno della visita porta con te la tessera sanitaria, l'impegnativa del medico e l'eventuale esenzione.
           </p>
         </div>
 
-        <button type="button" class="btn btn-primary" style="margin-top: 20px;" onclick="resetAll()">
+        <button type="button" class="btn btn-primary" style="margin-top: 1.25rem;" onclick="resetAll()">
           Fai una nuova ricerca
         </button>
       </div>
@@ -583,8 +653,9 @@
   </main>
 
   <script>
+    let selectedSpecialty = 'Visita Ortopedica';
     let selectedPriority = 'D';
-    let currentFlow = 'booking'; // 'booking' | 'alert'
+    let currentFlow = 'booking';
     let chosenOption = null;
 
     const database = {
@@ -671,13 +742,23 @@
     };
 
     function toggleFontSize() {
-      document.body.classList.toggle('large-text');
+      const htmlEl = document.documentElement;
       const btn = document.getElementById('toggleFontBtn');
-      if (document.body.classList.contains('large-text')) {
+      const isLarge = htmlEl.classList.toggle('large-text');
+
+      if (isLarge) {
         btn.textContent = '🔍 Testo normale';
+        btn.classList.add('active-zoom');
       } else {
         btn.textContent = '🔍 Ingrandisci testo';
+        btn.classList.remove('active-zoom');
       }
+    }
+
+    function selectSpecialty(name, el) {
+      selectedSpecialty = name;
+      document.querySelectorAll('.specialty-card').forEach(card => card.classList.remove('selected'));
+      el.classList.add('selected');
     }
 
     function selectPriority(code, el) {
@@ -704,11 +785,10 @@
     }
 
     function goToStep2() {
-      const specialty = document.getElementById('specialty').value;
       const zone = document.getElementById('zone').value;
       const list = database[zone] || database.Campobasso;
 
-      document.getElementById('resultsTitle').textContent = `${specialty} (Priorità ${selectedPriority})`;
+      document.getElementById('resultsTitle').textContent = `${selectedSpecialty} (Priorità ${selectedPriority})`;
       document.getElementById('resultsSubtitle').textContent = `Ecco le prime date disponibili in zona: ${zone}.`;
 
       const container = document.getElementById('resultsContainer');
@@ -723,11 +803,9 @@
         card.className = `result-card ${item.fast ? 'highlight' : ''}`;
         card.innerHTML = `
           <div class="badge-row">${badgeHtml}</div>
-          <div class="result-header">
-            <div>
-              <div class="facility-name">${item.facility}</div>
-              <div class="facility-city">📍 ${item.city} —${item.note}</div>
-            </div>
+          <div>
+            <div class="facility-name">${item.facility}</div>
+            <div class="facility-city">📍 ${item.city} —${item.note}</div>
           </div>
           <div class="date-box ${item.fast ? 'fast' : ''}">
             📅 Prima data utile: ${item.date}
@@ -748,7 +826,6 @@
 
     function chooseBooking(index) {
       const zone = document.getElementById('zone').value;
-      const specialty = document.getElementById('specialty').value;
       const list = database[zone] || database.Campobasso;
       chosenOption = list[index];
       currentFlow = 'booking';
@@ -758,6 +835,66 @@
       document.getElementById('confirmActionBtn').textContent = 'Conferma prenotazione gratuita';
 
       document.getElementById('selectedSummary').innerHTML = `
-        <p><strong>Visita:</strong> ${specialty} (Priorità ${selectedPriority})</p>
+        <p><strong>Visita:</strong> ${selectedSpecialty} (Priorità ${selectedPriority})</p>
         <p><strong>Struttura:</strong> ${chosenOption.facility} (${chosenOption.city})</p>
-        <p
+        <p><strong>Quando:</strong> ${chosenOption.date}</p>
+        <p><strong>Costo:</strong> Solo Ticket SSN (o gratuito se hai esenzione)</p>
+      `;
+
+      showStep3Form();
+    }
+
+    function chooseAlertFlow() {
+      const zone = document.getElementById('zone').value;
+      currentFlow = 'alert';
+      chosenOption = null;
+
+      document.getElementById('step3Title').textContent = 'Attiva avviso disdette gratuito';
+      document.getElementById('step3Subtitle').textContent = 'Ti avviseremo noi appena si libera un posto per rinuncia.';
+      document.getElementById('confirmActionBtn').textContent = 'Attiva avviso SMS gratuito';
+
+      document.getElementById('selectedSummary').innerHTML = `
+        <p><strong>Servizio:</strong> Avviso automatico disdette CUP / Convenzionati</p>
+        <p><strong>Visita cercata:</strong> ${selectedSpecialty} (Priorità ${selectedPriority})</p>
+        <p><strong>Zona:</strong> ${zone}</p>
+        <p><strong>Come funziona:</strong> Riceverai un <strong>SMS gratuito</strong> appena si libera un posto e avrai <strong>2 ore di tempo</strong> per confermarlo.</p>
+      `;
+
+      showStep3Form();
+    }
+
+    function showStep3Form() {
+      document.getElementById('bookingFormView').classList.remove('hidden');
+      document.getElementById('finalSuccessView').classList.add('hidden');
+      document.getElementById('step-1').classList.add('hidden');
+      document.getElementById('step-2').classList.add('hidden');
+      document.getElementById('step-3').classList.remove('hidden');
+      updateStepper(3);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function backToStep2() {
+      document.getElementById('step-3').classList.add('hidden');
+      document.getElementById('step-2').classList.remove('hidden');
+      updateStepper(2);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function submitFinal() {
+      const nameInput = document.getElementById('userName').value.trim();
+      const phoneInput = document.getElementById('userPhone').value.trim();
+
+      if (!nameInput || !phoneInput) {
+        alert('Per favore inserisci il tuo nome e un numero di cellulare per ricevere la conferma.');
+        return;
+      }
+
+      const zone = document.getElementById('zone').value;
+
+      document.getElementById('bookingFormView').classList.add('hidden');
+      document.getElementById('finalSuccessView').classList.remove('hidden');
+
+      if (currentFlow === 'booking') {
+        document.getElementById('successHeading').textContent = `🎉 Posto bloccato per ${nameInput}!`;
+        document.getElementById('successMessage').textContent =
+          `Abbiamo inviato un SMS di riepilogo al numero ${phoneInput}. Non devi fare
