@@ -27,7 +27,7 @@
     }
 
     html.large-text {
-      font-size: 21px; /* Ingrandisce in modo netto tutta l'interfaccia (+31%) */
+      font-size: 21px;
     }
 
     * {
@@ -44,7 +44,6 @@
       line-height: 1.55;
     }
 
-    /* Header */
     header {
       background-color: var(--primary);
       color: #ffffff;
@@ -65,7 +64,6 @@
     .brand h1 {
       font-size: 1.55rem;
       font-weight: 800;
-      letter-spacing: -0.3px;
     }
 
     .brand p {
@@ -83,14 +81,6 @@
       font-size: 1rem;
       font-weight: 800;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .font-toggle:hover {
-      background: #e9f2ff;
     }
 
     .font-toggle.active-zoom {
@@ -99,7 +89,6 @@
       border-color: #ffd43b;
     }
 
-    /* Container & Stepper */
     main {
       max-width: 840px;
       margin: 1.5rem auto 3rem;
@@ -128,7 +117,6 @@
       background: #ffffff;
       color: var(--primary);
       border-color: var(--primary);
-      box-shadow: 0 2px 6px rgba(11, 94, 215, 0.12);
     }
 
     .step-pill.done {
@@ -137,7 +125,6 @@
       border-color: var(--green-border);
     }
 
-    /* Card */
     .card {
       background: var(--surface);
       border: 2px solid var(--border);
@@ -149,7 +136,6 @@
     h2 {
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
-      color: var(--text);
     }
 
     .subtitle {
@@ -158,7 +144,6 @@
       font-size: 1.05rem;
     }
 
-    /* Info Box: Niente codice ricetta */
     .reassure-box {
       background-color: #eef6ff;
       border: 2px solid #9ec5fe;
@@ -176,12 +161,11 @@
       margin-bottom: 0.2rem;
     }
 
-    /* Form Controls */
     .form-group {
       margin-bottom: 1.5rem;
     }
 
-    label.field-label {
+    .field-label {
       display: block;
       font-weight: 800;
       margin-bottom: 0.65rem;
@@ -198,13 +182,6 @@
       color: var(--text);
     }
 
-    select:focus, input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.2);
-    }
-
-    /* Griglia Visite con Emoticon */
     .specialty-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -224,12 +201,12 @@
       text-align: center;
       cursor: pointer;
       background: #ffffff;
-      transition: all 0.15s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 0.35rem;
+      font-family: inherit;
     }
 
     .specialty-card:hover {
@@ -249,652 +226,3 @@
     }
 
     .specialty-name {
-      font-weight: 800;
-      font-size: 1rem;
-      color: var(--text);
-    }
-
-    /* Priority Grid */
-    .priority-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-    }
-
-    @media (max-width: 600px) {
-      .priority-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .priority-option {
-      border: 2px solid #94a3b8;
-      border-radius: 12px;
-      padding: 0.9rem;
-      cursor: pointer;
-      background: #ffffff;
-      transition: all 0.15s ease;
-    }
-
-    .priority-option:hover {
-      border-color: var(--primary);
-      background: #f8fbff;
-    }
-
-    .priority-option.selected {
-      border-color: var(--primary);
-      background: #e7f1ff;
-      box-shadow: 0 0 0 2px var(--primary);
-    }
-
-    .priority-code {
-      display: inline-block;
-      background: var(--primary);
-      color: #ffffff;
-      font-weight: 800;
-      padding: 0.15rem 0.65rem;
-      border-radius: 6px;
-      margin-right: 0.5rem;
-      font-size: 1.05rem;
-    }
-
-    .priority-title {
-      font-weight: 800;
-      font-size: 1.05rem;
-    }
-
-    .priority-desc {
-      display: block;
-      margin-top: 0.35rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      width: 100%;
-      padding: 1rem 1.25rem;
-      font-size: 1.15rem;
-      font-weight: 800;
-      border-radius: 12px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-    }
-
-    .btn-green {
-      background: var(--green);
-      color: #ffffff;
-    }
-
-    .btn-green:hover {
-      background: #0f5132;
-    }
-
-    .btn-outline {
-      background: #ffffff;
-      color: var(--text);
-      border: 2px solid #94a3b8;
-      margin-top: 0.75rem;
-    }
-
-    .btn-outline:hover {
-      background: #f1f5f9;
-    }
-
-    /* Results Cards */
-    .result-card {
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 1.15rem;
-      margin-bottom: 1rem;
-      background: #ffffff;
-    }
-
-    .result-card.highlight {
-      border-color: var(--green);
-      background: #f6fcf9;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.65rem;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 0.4rem 0.75rem;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .badge-public {
-      background: #cfe2ff;
-      color: #084298;
-      border: 1px solid #9ec5fe;
-    }
-
-    .badge-ssn-ticket {
-      background: var(--green-bg);
-      color: var(--green);
-      border: 2px solid var(--green);
-      font-size: 0.95rem;
-    }
-
-    .facility-name {
-      font-size: 1.25rem;
-      font-weight: 800;
-    }
-
-    .facility-city {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .date-box {
-      background: #f1f5f9;
-      padding: 0.65rem 0.9rem;
-      border-radius: 8px;
-      margin: 0.75rem 0;
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
-
-    .date-box.fast {
-      background: var(--green-bg);
-      color: #0a3622;
-    }
-
-    /* Disdette Box */
-    .alert-box {
-      background: var(--amber-bg);
-      border: 2px solid var(--amber-border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    .alert-box h3 {
-      color: var(--amber-text);
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .alert-box p {
-      color: #523e02;
-      margin-bottom: 0.9rem;
-      font-size: 1rem;
-    }
-
-    /* Confirmation Box */
-    .confirm-panel {
-      background: var(--green-bg);
-      border: 2px solid var(--green);
-      border-radius: 12px;
-      padding: 1.4rem;
-      color: #0a3622;
-    }
-
-    .confirm-panel h3 {
-      font-size: 1.35rem;
-      margin-bottom: 0.65rem;
-    }
-
-    .summary-list {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 1rem;
-      margin: 1rem 0;
-      color: var(--text);
-      border: 1px solid var(--green-border);
-    }
-
-    .summary-list p {
-      margin-bottom: 0.5rem;
-    }
-
-    .summary-list p:last-child {
-      margin-bottom: 0;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="header-inner">
-      <div class="brand">
-        <h1>PrimoPosto Molise</h1>
-        <p>Trova il primo posto disponibile tra Ospedali ASReM e Strutture Convenzionate</p>
-      </div>
-      <button type="button" class="font-toggle" id="toggleFontBtn" onclick="toggleFontSize()">
-        🔍 Ingrandisci testo
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Barra dei 3 passi -->
-    <div class="stepper">
-      <div class="step-pill active" id="pill-1">1. Cerca visita</div>
-      <div class="step-pill" id="pill-2">2. Scegli posto</div>
-      <div class="step-pill" id="pill-3">3. Conferma</div>
-    </div>
-
-    <!-- PASSO 1: RICERCA -->
-    <section class="card" id="step-1">
-      <h2>Di quale visita hai bisogno?</h2>
-      <p class="subtitle">Confrontiamo in un clic le disponibilità in Molise senza costi aggiuntivi.</p>
-
-      <div class="reassure-box">
-        <strong>ℹ️ Non serve avere la ricetta in mano né inserire codici lunghi</strong>
-        Per cercare ti basta toccare la visita e scegliere la <strong>lettera di priorità</strong> scritta dal medico (U, B, D oppure P).
-      </div>
-
-      <div class="form-group">
-        <label class="field-label">1. Tocca la visita specialistica che devi fare</label>
-        <div class="specialty-grid" id="specialtyGrid">
-          <div class="specialty-card selected" onclick="selectSpecialty('Visita Ortopedica', this)">
-            <span class="specialty-emoji">🦴</span>
-            <span class="specialty-name">Ortopedia</span>
-          </div>
-          <div class="specialty-card" onclick="selectSpecialty('Visita Cardiologica + ECG', this)">
-            <span class="specialty-emoji">❤️</span>
-            <span class="specialty-name">Cardiologia</span>
-          </div>
-          <div class="specialty-card" onclick="selectSpecialty('Visita Oculistica', this)">
-            <span class="specialty-emoji">👁️</span>
-            <span class="specialty-name">Oculistica</span>
-          </div>
-          <div class="specialty-card" onclick="selectSpecialty('Visita Dermatologica', this)">
-            <span class="specialty-emoji">🩺</span>
-            <span class="specialty-name">Dermatologia</span>
-          </div>
-          <div class="specialty-card" onclick="selectSpecialty('Ecografia Addome Completo', this)">
-            <span class="specialty-emoji">🖥️</span>
-            <span class="specialty-name">Ecografia</span>
-          </div>
-          <div class="specialty-card" onclick="selectSpecialty('Visita Neurologica', this)">
-            <span class="specialty-emoji">🧠</span>
-            <span class="specialty-name">Neurologia</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="field-label">2. Quale lettera c'è sulla tua ricetta?</label>
-        <div class="priority-grid" id="priorityGrid">
-          <div class="priority-option" data-code="U" onclick="selectPriority('U', this)">
-            <span class="priority-code">U</span>
-            <span class="priority-title">Urgente</span>
-            <span class="priority-desc">Da fare entro 72 ore (3 giorni)</span>
-          </div>
-          <div class="priority-option" data-code="B" onclick="selectPriority('B', this)">
-            <span class="priority-code">B</span>
-            <span class="priority-title">Breve</span>
-            <span class="priority-desc">Da fare entro 10 giorni</span>
-          </div>
-          <div class="priority-option selected" data-code="D" onclick="selectPriority('D', this)">
-            <span class="priority-code">D</span>
-            <span class="priority-title">Differibile</span>
-            <span class="priority-desc">Da fare entro 30 giorni (visite)</span>
-          </div>
-          <div class="priority-option" data-code="P" onclick="selectPriority('P', this)">
-            <span class="priority-code">P</span>
-            <span class="priority-title">Programmata</span>
-            <span class="priority-desc">Controllo entro 120 giorni</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="field-label" for="zone">3. Zona preferita in Molise</label>
-        <select id="zone">
-          <option value="Campobasso">📍 Campobasso e dintorni</option>
-          <option value="Isernia">📍 Isernia e dintorni</option>
-          <option value="Termoli">📍 Termoli e Basso Molise</option>
-          <option value="Tutto">🗺️ Tutto il Molise (mostra il posto più vicino nel tempo)</option>
-        </select>
-      </div>
-
-      <button type="button" class="btn btn-primary" onclick="goToStep2()">
-        Cerca il primo posto disponibile →
-      </button>
-    </section>
-
-    <!-- PASSO 2: RISULTATI -->
-    <section class="card hidden" id="step-2">
-      <h2 id="resultsTitle">Disponibilità trovate</h2>
-      <p class="subtitle" id="resultsSubtitle">Confronto tra strutture pubbliche ASReM e centri privati accreditati SSN.</p>
-
-      <div id="resultsContainer"></div>
-
-      <!-- Opzione Avviso Disdette -->
-      <div class="alert-box">
-        <h3>🔔 Le date sono troppo lontane o scomode?</h3>
-        <p>Ogni giorno in Molise si liberano posti per rinunce dell'ultimo minuto. Attiva l'avviso gratuito: appena si libera un posto vicino a te, ti avvisiamo subito.</p>
-        <button type="button" class="btn btn-primary" onclick="chooseAlertFlow()">
-          Avvisami appena si libera un posto (Gratis)
-        </button>
-      </div>
-
-      <button type="button" class="btn btn-outline" onclick="goToStep1()">
-        ← Cambia visita o zona
-      </button>
-    </section>
-
-    <!-- PASSO 3: CONFERMA PRENOTAZIONE O AVVISO -->
-    <section class="card hidden" id="step-3">
-      <div id="bookingFormView">
-        <h2 id="step3Title">Completa in 30 secondi</h2>
-        <p class="subtitle" id="step3Subtitle">Inserisci solo nome e cellulare per ricevere il promemoria.</p>
-
-        <div class="reassure-box">
-          <strong>✅ Nessun codice fiscale o numero ricetta richiesto ora</strong>
-          Ti chiediamo solo il tuo nome e il numero di cellulare per confermare il posto o mandarti l'SMS.
-        </div>
-
-        <div class="summary-list" id="selectedSummary"></div>
-
-        <div class="form-group">
-          <label class="field-label" for="userName">Il tuo Nome e Cognome</label>
-          <input type="text" id="userName" placeholder="Es. Anna Rossi" />
-        </div>
-
-        <div class="form-group">
-          <label class="field-label" for="userPhone">Numero di Cellulare (per SMS di conferma)</label>
-          <input type="tel" id="userPhone" placeholder="Es. 333 1234567" />
-        </div>
-
-        <button type="button" class="btn btn-green" id="confirmActionBtn" onclick="submitFinal()">
-          Conferma adesso
-        </button>
-
-        <button type="button" class="btn btn-outline" onclick="backToStep2()">
-          ← Torna alle disponibilità
-        </button>
-      </div>
-
-      <!-- Schermata finale completata -->
-      <div id="finalSuccessView" class="hidden">
-        <div class="confirm-panel">
-          <h3 id="successHeading">🎉 Richiesta confermata!</h3>
-          <p id="successMessage"></p>
-          <div class="summary-list" id="finalReceipt"></div>
-          <p style="font-size: 1rem; margin-top: 0.75rem;">
-            <strong>Promemoria:</strong> Il giorno della visita porta con te la tessera sanitaria, l'impegnativa del medico e l'eventuale esenzione.
-          </p>
-        </div>
-
-        <button type="button" class="btn btn-primary" style="margin-top: 1.25rem;" onclick="resetAll()">
-          Fai una nuova ricerca
-        </button>
-      </div>
-    </section>
-  </main>
-
-  <script>
-    let selectedSpecialty = 'Visita Ortopedica';
-    let selectedPriority = 'D';
-    let currentFlow = 'booking';
-    let chosenOption = null;
-
-    const database = {
-      Campobasso: [
-        {
-          facility: "Ospedale A. Cardarelli (ASReM)",
-          city: "Campobasso",
-          type: "public",
-          date: "Tra 74 giorni (25 Gennaio)",
-          note: "Disponibilità standard CUP regionale",
-          fast: false
-        },
-        {
-          facility: "Responsible Research Hospital (ex Gemelli Molise)",
-          city: "Campobasso",
-          type: "accredited",
-          date: "Tra 6 giorni (Mercoledì prossimo, ore 10:30)",
-          note: "Posto convenzionato SSN disponibile subito",
-          fast: true
-        }
-      ],
-      Isernia: [
-        {
-          facility: "Ospedale F. Veneziale (ASReM)",
-          city: "Isernia",
-          type: "public",
-          date: "Tra 68 giorni (19 Gennaio)",
-          note: "Disponibilità standard CUP regionale",
-          fast: false
-        },
-        {
-          facility: "IRCCS Neuromed — Polo Diagnostico",
-          city: "Pozzilli (IS)",
-          type: "accredited",
-          date: "Tra 8 giorni (Venerdì prossimo, ore 15:00)",
-          note: "Posto convenzionato SSN disponibile",
-          fast: true
-        }
-      ],
-      Termoli: [
-        {
-          facility: "Ospedale San Timoteo (ASReM)",
-          city: "Termoli (CB)",
-          type: "public",
-          date: "Tra 61 giorni (12 Gennaio)",
-          note: "Disponibilità standard CUP regionale",
-          fast: false
-        },
-        {
-          facility: "Poliambulatorio Convenzionato Adriatico",
-          city: "Termoli (CB)",
-          type: "accredited",
-          date: "Tra 5 giorni (Martedì prossimo, ore 09:15)",
-          note: "Posto convenzionato SSN disponibile",
-          fast: true
-        }
-      ],
-      Tutto: [
-        {
-          facility: "Poliambulatorio Convenzionato Adriatico",
-          city: "Termoli (CB)",
-          type: "accredited",
-          date: "Tra 5 giorni (Martedì prossimo, ore 09:15)",
-          note: "Il primo posto in assoluto in tutto il Molise",
-          fast: true
-        },
-        {
-          facility: "Responsible Research Hospital (ex Gemelli Molise)",
-          city: "Campobasso",
-          type: "accredited",
-          date: "Tra 6 giorni (Mercoledì prossimo, ore 10:30)",
-          note: "Posto convenzionato SSN disponibile",
-          fast: true
-        },
-        {
-          facility: "Ospedale A. Cardarelli (ASReM)",
-          city: "Campobasso",
-          type: "public",
-          date: "Tra 74 giorni (25 Gennaio)",
-          note: "Disponibilità standard CUP regionale",
-          fast: false
-        }
-      ]
-    };
-
-    function toggleFontSize() {
-      const htmlEl = document.documentElement;
-      const btn = document.getElementById('toggleFontBtn');
-      const isLarge = htmlEl.classList.toggle('large-text');
-
-      if (isLarge) {
-        btn.textContent = '🔍 Testo normale';
-        btn.classList.add('active-zoom');
-      } else {
-        btn.textContent = '🔍 Ingrandisci testo';
-        btn.classList.remove('active-zoom');
-      }
-    }
-
-    function selectSpecialty(name, el) {
-      selectedSpecialty = name;
-      document.querySelectorAll('.specialty-card').forEach(card => card.classList.remove('selected'));
-      el.classList.add('selected');
-    }
-
-    function selectPriority(code, el) {
-      selectedPriority = code;
-      document.querySelectorAll('.priority-option').forEach(opt => opt.classList.remove('selected'));
-      el.classList.add('selected');
-    }
-
-    function updateStepper(activeStep) {
-      for (let i = 1; i <= 3; i++) {
-        const pill = document.getElementById('pill-' + i);
-        pill.classList.remove('active', 'done');
-        if (i < activeStep) pill.classList.add('done');
-        if (i === activeStep) pill.classList.add('active');
-      }
-    }
-
-    function goToStep1() {
-      document.getElementById('step-1').classList.remove('hidden');
-      document.getElementById('step-2').classList.add('hidden');
-      document.getElementById('step-3').classList.add('hidden');
-      updateStepper(1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function goToStep2() {
-      const zone = document.getElementById('zone').value;
-      const list = database[zone] || database.Campobasso;
-
-      document.getElementById('resultsTitle').textContent = `${selectedSpecialty} (Priorità ${selectedPriority})`;
-      document.getElementById('resultsSubtitle').textContent = `Ecco le prime date disponibili in zona: ${zone}.`;
-
-      const container = document.getElementById('resultsContainer');
-      container.innerHTML = '';
-
-      list.forEach((item, idx) => {
-        const badgeHtml = item.type === 'public'
-          ? `<span class="badge badge-public">🏥 Struttura Pubblica ASReM · Ticket SSN</span>`
-          : `<span class="badge badge-ssn-ticket">✓ Convenzionato · Paghi solo il Ticket SSN (0 € commissione)</span>`;
-
-        const card = document.createElement('div');
-        card.className = `result-card ${item.fast ? 'highlight' : ''}`;
-        card.innerHTML = `
-          <div class="badge-row">${badgeHtml}</div>
-          <div>
-            <div class="facility-name">${item.facility}</div>
-            <div class="facility-city">📍 ${item.city} —${item.note}</div>
-          </div>
-          <div class="date-box ${item.fast ? 'fast' : ''}">
-            📅 Prima data utile: ${item.date}
-          </div>
-          <button type="button" class="btn ${item.fast ? 'btn-green' : 'btn-primary'}" onclick="chooseBooking(${idx})">
-            Prenota questo posto
-          </button>
-        `;
-        container.appendChild(card);
-      });
-
-      document.getElementById('step-1').classList.add('hidden');
-      document.getElementById('step-2').classList.remove('hidden');
-      document.getElementById('step-3').classList.add('hidden');
-      updateStepper(2);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function chooseBooking(index) {
-      const zone = document.getElementById('zone').value;
-      const list = database[zone] || database.Campobasso;
-      chosenOption = list[index];
-      currentFlow = 'booking';
-
-      document.getElementById('step3Title').textContent = 'Conferma il tuo posto';
-      document.getElementById('step3Subtitle').textContent = 'Nessun costo di servizio: pagherai solo il normale ticket sanitario in struttura.';
-      document.getElementById('confirmActionBtn').textContent = 'Conferma prenotazione gratuita';
-
-      document.getElementById('selectedSummary').innerHTML = `
-        <p><strong>Visita:</strong> ${selectedSpecialty} (Priorità ${selectedPriority})</p>
-        <p><strong>Struttura:</strong> ${chosenOption.facility} (${chosenOption.city})</p>
-        <p><strong>Quando:</strong> ${chosenOption.date}</p>
-        <p><strong>Costo:</strong> Solo Ticket SSN (o gratuito se hai esenzione)</p>
-      `;
-
-      showStep3Form();
-    }
-
-    function chooseAlertFlow() {
-      const zone = document.getElementById('zone').value;
-      currentFlow = 'alert';
-      chosenOption = null;
-
-      document.getElementById('step3Title').textContent = 'Attiva avviso disdette gratuito';
-      document.getElementById('step3Subtitle').textContent = 'Ti avviseremo noi appena si libera un posto per rinuncia.';
-      document.getElementById('confirmActionBtn').textContent = 'Attiva avviso SMS gratuito';
-
-      document.getElementById('selectedSummary').innerHTML = `
-        <p><strong>Servizio:</strong> Avviso automatico disdette CUP / Convenzionati</p>
-        <p><strong>Visita cercata:</strong> ${selectedSpecialty} (Priorità ${selectedPriority})</p>
-        <p><strong>Zona:</strong> ${zone}</p>
-        <p><strong>Come funziona:</strong> Riceverai un <strong>SMS gratuito</strong> appena si libera un posto e avrai <strong>2 ore di tempo</strong> per confermarlo.</p>
-      `;
-
-      showStep3Form();
-    }
-
-    function showStep3Form() {
-      document.getElementById('bookingFormView').classList.remove('hidden');
-      document.getElementById('finalSuccessView').classList.add('hidden');
-      document.getElementById('step-1').classList.add('hidden');
-      document.getElementById('step-2').classList.add('hidden');
-      document.getElementById('step-3').classList.remove('hidden');
-      updateStepper(3);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function backToStep2() {
-      document.getElementById('step-3').classList.add('hidden');
-      document.getElementById('step-2').classList.remove('hidden');
-      updateStepper(2);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function submitFinal() {
-      const nameInput = document.getElementById('userName').value.trim();
-      const phoneInput = document.getElementById('userPhone').value.trim();
-
-      if (!nameInput || !phoneInput) {
-        alert('Per favore inserisci il tuo nome e un numero di cellulare per ricevere la conferma.');
-        return;
-      }
-
-      const zone = document.getElementById('zone').value;
-
-      document.getElementById('bookingFormView').classList.add('hidden');
-      document.getElementById('finalSuccessView').classList.remove('hidden');
-
-      if (currentFlow === 'booking') {
-        document.getElementById('successHeading').textContent = `🎉 Posto bloccato per ${nameInput}!`;
-        document.getElementById('successMessage').textContent =
-          `Abbiamo inviato un SMS di riepilogo al numero ${phoneInput}. Non devi fare
